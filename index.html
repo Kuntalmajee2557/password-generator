@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button>
+                <span data-copyMsg></span>
+                <img src="#" alt="copy" width="23" height="23">
+
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <!-- password length section -->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-LengthNumber>0</p>
+            </div>
+
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-LengthSlider>
+
+            <!-- checkbox -->
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes uppercase letter</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes lowercase letter</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers letter</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbols letter</label>
+            </div>
+
+            <!-- strength -->
+            <div class="strength-container">
+                <p>strength</p>
+                <div data-indicator></div>
+            </div>
+            
+            <button class="generateButton">Generate Password</button>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
